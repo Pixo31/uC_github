@@ -1,0 +1,40 @@
+# --- Salida de compilacion: una carpeta por preset de CMake (minusculas) ---
+debug/
+release/
+Debug/
+Release/
+*.o
+*.d
+*.elf
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.su
+
+# mcux_include.json lleva rutas personales (C:/Users/<usuario>/...) y el proyecto funciona
+# igual sin el: la extension lo regenera. No se sube.
+# .vscode/mcuxpresso-tools.json SI se versiona.
+mcux_include.json
+
+# --- Carpeta auxiliar de la extension ---
+__repo__/
+
+# --- MCUXpresso Config Tools ---
+# cfg_tools/ lo regeneran la extension y Config Tools con rutas absolutas de vuestro PC.
+# El .mex y board/ (pin_mux, clock_config, peripherals) SI se versionan.
+cfg_tools/
+# Copia del fichero anterior que deja Config Tools en cada "Update Code".
+*.bak
+
+# --- Registros ---
+*.log
+
+# --- Sistema operativo y editores ---
+Thumbs.db
+.DS_Store
+
+# --- Credenciales, nunca al repositorio ---
+*_credenciales.*
+wifi_config_local.h
